@@ -11,7 +11,6 @@ export const UserProvider = ({children}) => {
   const value = { currentUser, setCurrentUser };
   useEffect(() => {
     onAuthStateChangedListener((user) => {
-      console.log(user);
       if(user){
         createUserMethodFromAuth(user)
       }
